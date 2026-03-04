@@ -1,5 +1,5 @@
 require("dotenv").config();
-import express from "express";
+import express, { Request, Response } from "express";
 import cors from "cors";
 import rateLimit from "express-rate-limit";
 import { Server } from "socket.io";
@@ -51,6 +51,10 @@ app.use(
     credentials: true,
   })
 );
+
+app.get("/", (req: Request, res: Response) => {
+  res.send(`Membership backend server is running......`);
+});
 
 registerRoutesThatNeedsRawBody(app); // have to call this before express.json() to get raw body
 app.use(express.json());
