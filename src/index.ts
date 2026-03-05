@@ -25,6 +25,7 @@ const io = new Server(server, {
       "http://10.0.60.168:3001",
       "https://membership-management-website.vercel.app",
       "https://membership-management-dashboar.vercel.app",
+      "http://10.10.20.62:5173"
     ],
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
     credentials: true,
@@ -47,6 +48,7 @@ app.use(
       "http://10.0.60.168:3001",
       "https://membership-management-website.vercel.app",
       "https://membership-management-dashboar.vercel.app",
+      "http://10.10.20.62:5173"
     ],
     credentials: true,
   })
