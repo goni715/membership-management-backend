@@ -1,8 +1,11 @@
 import mongoose from "mongoose";
 import Schema from "./schema";
 import { attachOTPHooks } from "@services/otpService";
+import dotenv from "dotenv";
+dotenv.config();
 
 const startDB = async () => {
+  console.log(process.env.MONGO_URI);
   await mongoose.connect(process.env.MONGO_URI || "");
   console.log("MongoDB Connected!");
 

@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const notifications_1 = require("../../controllers/notifications");
+const express_1 = require("express");
+const router = (0, express_1.Router)();
+router.get("/", notifications_1.notifications_by_id);
+router.get("/count", notifications_1.notifications_count);
+router.get("/mark-as-read/:notificationId", notifications_1.mark_as_read);
+router.get("/mark-all-as-read", notifications_1.mark_all_as_read);
+exports.default = router;

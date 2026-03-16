@@ -12,6 +12,8 @@ import {
 } from "@routes/index";
 import db from "./db";
 import logger from "@utils/logger";
+import dns from "node:dns/promises";
+dns.setServers(["1.1.1.1"]);
 
 // config
 const app = express();
@@ -39,21 +41,21 @@ const limiter = rateLimit({
 });
 
 // app.use(limiter);
-// app.use(
-//   cors({
-//     origin: [
-//       "http://localhost:5173",
-//       "http://localhost:5174",
-//       "http://10.0.60.168:3002",
-//       "http://10.0.60.168:3001",
-//       "https://membership-management-website.vercel.app",
-//       "https://membership-management-dashboar.vercel.app",
-//       "http://10.10.20.62:5173"
-//     ],
-//     credentials: true,
-//   })
-// );
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173",
+      "http://localhost:5174",
+      "http://10.0.60.168:3002",
+      "http://10.0.60.168:3001",
+      "https://membership-management-website.vercel.app",
+      "https://membership-management-dashboar.vercel.app",
+      "http://10.10.20.62:5173"
+    ],
+    credentials: true,
+  })
+);
+// app.use(cors());
 
 app.get("/", (req: Request, res: Response) => {
   res.send(`Membership backend server is running......`);

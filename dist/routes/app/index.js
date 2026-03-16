@@ -1,0 +1,22 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.legalRoutes = exports.paymentRoutes = exports.dashboardRoutes = exports.stripeRoutes = exports.notificationsRoutes = exports.profileRoutes = exports.toolsRoutes = exports.authRoutes = void 0;
+var auth_routes_1 = require("./auth.routes");
+Object.defineProperty(exports, "authRoutes", { enumerable: true, get: function () { return __importDefault(auth_routes_1).default; } });
+var tools_routes_1 = require("./tools.routes");
+Object.defineProperty(exports, "toolsRoutes", { enumerable: true, get: function () { return __importDefault(tools_routes_1).default; } });
+var profile_routes_1 = require("./profile.routes");
+Object.defineProperty(exports, "profileRoutes", { enumerable: true, get: function () { return __importDefault(profile_routes_1).default; } });
+var notifications_routes_1 = require("./notifications.routes");
+Object.defineProperty(exports, "notificationsRoutes", { enumerable: true, get: function () { return __importDefault(notifications_routes_1).default; } });
+var stripe_routes_1 = require("./stripe.routes");
+Object.defineProperty(exports, "stripeRoutes", { enumerable: true, get: function () { return __importDefault(stripe_routes_1).default; } });
+var dashboard_routes_1 = require("./dashboard.routes");
+Object.defineProperty(exports, "dashboardRoutes", { enumerable: true, get: function () { return __importDefault(dashboard_routes_1).default; } });
+var payment_routes_1 = require("./payment.routes");
+Object.defineProperty(exports, "paymentRoutes", { enumerable: true, get: function () { return __importDefault(payment_routes_1).default; } });
+var legal_routes_1 = require("./legal.routes");
+Object.defineProperty(exports, "legalRoutes", { enumerable: true, get: function () { return __importDefault(legal_routes_1).default; } });
